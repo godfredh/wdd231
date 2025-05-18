@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="Directory | Chamber Accra">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://godfredh.github.io/wdd231/chamber/images/logo-chamber-modified-small.jpg">
+    <meta property="og:url" content="https://godfredh.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="Chamber of Accra, Join us to get more information">
+    <meta property="fb:app_id" content="your-app-id-here">
+
+
+    <title>Discover | Accra Chamber of Commerce</title>
+    <meta name="description" content="Chamber directory, Accra" />
+    <meta name="author" content="Mensah Godfred" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap">
+    </noscript>
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+
+    <script type="module" src="./scripts/app.js"></script>
+    <script src="./scripts/modules/discover.js" defer></script>
+
+
+    <link rel="icon" href="images/favicon-main-modified.ico" sizes="48x48" type="image/ico">
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="discover-page">
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/logo-chamber-modified-small.jpg" alt="Logo Chamber Accra" />
+                <h1 class="nameHeader">Accra<br>Chamber of Ecomerces</h1>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a " href="./index.html">Home</a></li>
+                <li><a class="nav-a " href="./discovery.html">Discover</a></li>
+                <li><a class="nav-a " href="./directory.html">Directory</a></li>
+                <li><a class="nav-a " href="./join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover">
+        <section class="side-bar">
+            <article class="article-01">
+                <header>
+                    <h3>Demographics</h3>
+                </header>
+                <ul>
+                    <li><strong>Capital:</strong> Greater Accra</li>
+                    <li><strong>Currencies:</strong> Ghana, Ghanaian Cedi</li>
+                    <li><strong>Official language:</strong> English</li>
+                    <li><strong>Population:</strong> 33.79</li>
+                    <li><strong>Dialing code:</strong> +233</li>
+                </ul>
+            </article>
+            <article id="article-02" class="article-02">
+            </article>
+            <article class="article-03">
+                <table id="calendar">
+                    <caption></caption> <!-- Moved out of thead -->
+                    <thead>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mie</th>
+                            <th>Jue</th>
+                            <th>Vie</th>
+                            <th>Sab</th>
+                        </tr>
+                    </thead>
+                    <tbody> </tbody>
+                </table>
+            </article>
+
+        </section>
+        <section class="local-photos">
+            <figure>
+                <img data-src="images/ghana-image-01.jpg" src="ghana-image-01.jpg"
+                    alt="Beautiful sunset over the beach" class="lazy-image" loading="lazy">
+                <figcaption>Beautifult beach</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/ghana-image-02.jpg" src="ghana-image-02.jpg" alt="Historic town square"
+                    class="lazy-image" loading="lazy">
+                <figcaption>Historic Site in Ghana</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/ghana-image-03.jpg" src="images/ghana-image-03.jpg" alt="Lush rainforest"
+                    class="lazy-image" loading="lazy">
+                <figcaption>Lush rainforest</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/ghana-image-04.jpg" src="images/ghana-image-04.jpg" alt="Mountain landscape"
+                    class="lazy-image" loading="lazy">
+                <figcaption>Mountain landscape</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/ghana-image-05.jpg" src="images/ghana-image-05.jpg" alt="Colonial architecture"
+                    class="lazy-image" loading="lazy">
+                <figcaption>Colonial architecture</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/ghana-image-06.jpg" src="images/ghana-image-06.jpg" alt="Vibrant city skyline"
+                    class="lazy-image" loading="lazy">
+                <figcaption>Vibrant city skyline</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear">Lorem</span> Mensah Godfred |
+            Accra</p>
+        <p id="lastModified">Lorem ipsum</p>
+    </footer>
+
+</body>
+
+</html>
