@@ -49,7 +49,7 @@ function mostrarCalendario(year, month) {
         "May",
         "June",
         "July",
-        "Agust",
+        "August",
         "September",
         "October",
         "November",
@@ -99,7 +99,7 @@ function mostrarCalendario(year, month) {
         .getElementsByTagName("tbody")[0].innerHTML = resultado;
 }
 
-// Inicializar el calendario con el mes actual
+// Initialize the calendar with the current month
 mostrarCalendario(actual.getFullYear(), actual.getMonth() + 1);
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -178,23 +178,4 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch((error) => {
             console.error("Error fetching the JSON file:", error);
         });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const lazyImages = document.querySelectorAll(".lazy-image");
-
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.getAttribute("data-src");
-                img.classList.remove("lazy-image");
-                observer.unobserve(img);
-            }
-        });
-    });
-
-    lazyImages.forEach((image) => {
-        imageObserver.observe(image);
-    });
 });
