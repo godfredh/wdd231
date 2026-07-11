@@ -1,0 +1,472 @@
+/* ============================================
+   WDD231 - Small/Mobile Styles (Base)
+   ============================================ */
+
+:root {
+    /* Colors */
+    --true-blue: #0466c8;
+    --sapphire: #0353a4;
+    --yale-blue: #023e7d;
+    --oxford-blue: #002855;
+    --oxford-blue-2: #001845;
+    --oxford-blue-3: #001233;
+    --delft-blue: #33415c;
+    --paynes-gray: #5c677d;
+    --slate-gray: #7d8597;
+    --cool-gray: #979dac;
+    --alice-blue: #edf6f9;
+
+    /* Text Colors */
+    --headline-color-on-white: var(--oxford-blue-3);
+    --headline-color-on-color: var(--alice-blue);
+    --paragraph-color-on-white: var(--paynes-gray);
+    --paragraph-color-on-color: var(--alice-blue);
+    --paragraph-background-color: var(--alice-blue);
+
+    /* Navigation Colors */
+    --nav-link-color: var(--oxford-blue-3);
+    --nav-background-color: var(--cool-gray);
+    --nav-hover-link-color: var(--oxford-blue-3);
+    --nav-hover-background-color: var(--true-blue);
+
+    /* Fonts */
+    --barlow-regular-font-family: "Barlow", sans-serif;
+    --lato-regular-font-family: "Lato", sans-serif;
+
+    /* Font Sizes */
+    --font-size-small: 16px;
+    --font-size-base: 20px;
+    --font-size-large: 24px;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+    font-family: var(--lato-regular-font-family);
+}
+
+p {
+    font-family: var(--barlow-regular-font-family);
+}
+
+/* ============================================
+   Layout
+   ============================================ */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ============================================
+   Header
+   ============================================ */
+
+header,
+footer {
+    background-color: var(--oxford-blue);
+    color: var(--alice-blue);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 1rem;
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+.avatar {
+    width: 80px;
+    height: 141px;
+    box-sizing: border-box;
+    border: 2.5px var(--alice-blue) solid;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+}
+
+.avatar img {
+    width: 100%;
+    height: auto;
+}
+
+header h1 {
+    margin-left: 20px;
+    font-size: var(--font-size-base);
+    font-weight: bold;
+}
+
+/* ============================================
+   Navigation (Mobile - Hamburger)
+   ============================================ */
+
+#menu {
+    display: block;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: var(--oxford-blue);
+    color: var(--alice-blue);
+    font-family: Roboto, sans-serif;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.5rem;
+    cursor: pointer;
+    border: 0;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+nav {
+    background-color: var(--yale-blue);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: none;
+    border-bottom: 1px solid #555;
+}
+
+nav a {
+    display: block;
+    color: var(--alice-blue);
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+nav a:hover:not(.active) {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+}
+
+nav li:last-child {
+    border-bottom: none;
+}
+
+nav a.active {
+    background-color: #fef9d9;
+    color: var(--oxford-blue-3);
+}
+
+/* Open menu state */
+.open li {
+    display: block;
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+/* ============================================
+   Main Content
+   ============================================ */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    margin: 20px;
+    flex: 1;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--oxford-blue-3);
+}
+
+main section {
+    border-radius: 5px;
+    box-shadow: 6px 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 10px auto;
+    background-color: var(--paragraph-background-color);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+section h2 {
+    background-color: var(--oxford-blue-3);
+    color: var(--headline-color-on-color);
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    font-size: var(--font-size-base);
+    padding: 10px 0;
+}
+
+section ul {
+    padding: 0 40px;
+    margin: 10px 0;
+}
+
+section li {
+    text-align: left;
+    font-size: var(--font-size-small);
+    margin-bottom: 5px;
+}
+
+/* Country section image */
+picture {
+    padding: 10px;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+section img {
+    height: auto;
+    width: 80%;
+    display: block;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+section p {
+    font-size: var(--font-size-small);
+    margin: 0 0 10px 0;
+}
+
+/* ============================================
+   Certificate / Course Section
+   ============================================ */
+
+.boxButton {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.courseButton {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 5rem;
+    color: var(--alice-blue);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+}
+
+.courseButton::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--slate-gray);
+    border-radius: 5rem;
+    z-index: -2;
+}
+
+.courseButton::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--alice-blue);
+    transition: all 0.3s;
+    border-radius: 5rem;
+    z-index: -1;
+}
+
+.courseButton:hover {
+    color: var(--oxford-blue-3);
+}
+
+.courseButton:hover::before {
+    width: 100%;
+}
+
+.boxcertificate01 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.course {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--oxford-blue-3) solid 2px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.course h3 {
+    font-size: var(--font-size-small);
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+}
+
+.courseNoComplete {
+    background-color: var(--alice-blue);
+    color: var(--oxford-blue-3);
+}
+
+.courseComplete {
+    background-color: var(--yale-blue);
+    color: white;
+}
+
+.course::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top: 1px solid rgba(0, 18, 51, 0.468);
+    border-bottom: 1px solid rgba(0, 18, 51, 0.468);
+    transform: scale(0.1, 1);
+}
+
+.course:hover h3 {
+    letter-spacing: 2px;
+}
+
+.course:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.course::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    background-color: rgba(8, 118, 227, 0.1);
+}
+
+.course:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+
+#totalCreditsCert01 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ============================================
+   Dialog
+   ============================================ */
+
+dialog {
+    border: 1px solid var(--oxford-blue-3);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    background-color: var(--paragraph-background-color);
+    box-shadow: 0 0 3rem var(--oxford-blue-3);
+    width: 90%;
+    max-width: 600px;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--oxford-blue-3);
+    cursor: pointer;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+footer {
+    margin-top: auto;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Social Icons */
+.social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.social a {
+    color: var(--alice-blue);
+    transition: color 0.3s;
+}
+
+.social a:hover {
+    color: var(--true-blue);
+}
+
+.social svg {
+    width: 32px;
+    height: 32px;
+    display: block;
+}

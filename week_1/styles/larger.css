@@ -1,0 +1,94 @@
+/* ============================================
+   WDD231 - Large/Desktop Styles
+   Media Query: min-width 1024px
+   ============================================ */
+
+@media (min-width: 1024px) {
+
+    /* ============================================
+       Navigation (Desktop - Horizontal)
+       ============================================ */
+    #menu {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: block;
+        flex: 1 1 auto;
+        max-width: 200px;
+        border-bottom: none;
+    }
+
+    nav a {
+        padding: 12px 24px;
+    }
+
+    /* ============================================
+       Main Layout
+       ============================================ */
+    main {
+        width: 80%;
+        max-width: 1200px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title title"
+            "course country"
+            "certificate certificate";
+        gap: 1.5em;
+    }
+
+    main h1 {
+        grid-area: title;
+    }
+
+    .courseWork-box {
+        grid-area: course;
+    }
+
+    .country-box {
+        grid-area: country;
+    }
+
+    .certificate-box {
+        grid-area: certificate;
+    }
+
+    main section {
+        max-width: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* ============================================
+       Certificate Grid
+       ============================================ */
+    .boxcertificate01 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+        gap: 1em;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .course {
+        width: auto;
+    }
+
+    /* ============================================
+       Typography
+       ============================================ */
+    main p {
+        font-size: var(--font-size-base);
+    }
+
+    section h2 {
+        font-size: var(--font-size-large);
+    }
+}

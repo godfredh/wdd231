@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Home page">
+    <meta name="author" content="Mensah Godfred">
+
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="Home | Mensah Godfred">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/accra-card.jpg">
+    <meta property="og:url" content="https://godfredh.github.io/wdd231/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Home | Mensah Godfred</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
 </head>
+
 <body>
-    
+    <header>
+        <img class="avatar" src="images/godfred.jpg" alt="Mensah Godfred photo">
+        <span>Mensah Godfred</span>
+        <button id="menu" title="Menu"></button>
+    </header>
+    <nav>
+        <!--  Essential META Tags -->
+        <ul>
+            <li><a href="index.html">Home</a></a></li>
+            <li><a href="chamber/index.html" target="_blank">Chamber</a></li>
+            <li><a href="Final/index.html" target="_blank">Final</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="courseWork-box">
+            <h1>Home</h1>
+            <ul>
+                <li>Maths for the real world</li>
+                <li>wdd131</li>
+                <li>cse121b</li>
+                <li>cse210-hw</li>
+                <li>Chamber Discover Page / Project Site Plan
+                </li>
+                <li>wdd130</li>
+            </ul>
+        </section>
+        <section class="country-box">
+            <h2>Accra</h2>
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/accra_mediuM.jpg">
+                <source media="(min-width: 768px)" srcset="images/accra_small.jpg">
+                <img src="images/accra_small.jpg" alt="Accra" width="300" height="225">
+            </picture>
+            <p>Accra</p>
+        </section>
+        <section class="certificate-box">
+            <h2>Web and Computer Programming certificate</h2>
+            <div class="boxButton">
+                <button class="courseButton" value="all" title="Filter button">All</button>
+                <button class="courseButton" value="cse" title="Filter button">CSE</button>
+                <button class="courseButton" value="wdd" title="Filter button">WDD</button>
+            </div>
+            <div class="boxcertificate01 boxCourse"></div>
+            <dialog id="courses-details"></dialog>
+            <p id="totalCreditsCert01">Total Credits for Certificate 1: 0</p>
+        </section>
+
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com/godfredh" target="_blank"><img src="images/github-icon.svg" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/godfredmensah/" target="_blank"><img src="images/linkedin-icon.svg"
+                    alt="LinkedIn"></a>
+        </div>
+        <p>&copy;<span id="currentyear"></span> Mensah Godfred | Accra</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
