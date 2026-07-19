@@ -1,0 +1,349 @@
+/* ============================================
+   WDD231 - Small/Mobile Styles (Base)
+   Chamber of Commerce - All Pages
+   ============================================ */
+
+:root {
+    /* Colors */
+    --true-blue: #0466c8;
+    --sapphire: #0353a4;
+    --yale-blue: #023e7d;
+    --oxford-blue: #002855;
+    --oxford-blue-2: #001845;
+    --oxford-blue-3: #001233;
+    --delft-blue: #33415c;
+    --paynes-gray: #5c677d;
+    --slate-gray: #7d8597;
+    --cool-gray: #979dac;
+    --alice-blue: #edf6f9;
+
+    /* Text Colors */
+    --headline-color-on-white: var(--oxford-blue-3);
+    --headline-color-on-color: var(--alice-blue);
+
+    /* Navigation Colors */
+    --nav-link-color: var(--alice-blue);
+    --nav-background-color: var(--yale-blue);
+    --nav-hover-link-color: var(--oxford-blue-3);
+    --nav-hover-background-color: var(--true-blue);
+
+    /* Fonts */
+    --open-sans: "Open Sans", sans-serif;
+    --poppins: "Poppins", sans-serif;
+
+    /* Font Sizes */
+    --font-size-small: 16px;
+    --font-size-base: 18px;
+    --font-size-large: 24px;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+body {
+    font-family: var(--open-sans);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--oxford-blue-3);
+    margin: 0;
+    padding: 0;
+    background-color: var(--alice-blue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--poppins);
+    font-weight: 700;
+    margin: 0;
+}
+
+/* ============================================
+   Header & Navigation
+   ============================================ */
+
+header {
+    background-color: var(--oxford-blue);
+    color: var(--alice-blue);
+}
+
+.box-logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.logo-chamber {
+    width: 60px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.nameHeader {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    flex: 1;
+    margin-left: 15px;
+}
+
+/* Hamburger Menu */
+#menu {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--alice-blue);
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✕";
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--yale-blue);
+}
+
+nav ul li {
+    display: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul.open li {
+    display: block;
+}
+
+nav a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--alice-blue);
+    text-decoration: none;
+    font-family: var(--poppins);
+    transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--true-blue);
+}
+
+/* ============================================
+   Main Content
+   ============================================ */
+
+main {
+    padding: 20px;
+    min-height: 60vh;
+}
+
+.Main-title {
+    text-align: center;
+    color: var(--oxford-blue-3);
+    margin-bottom: 20px;
+    font-size: var(--font-size-large);
+}
+
+/* ============================================
+   Directory Page - Buttons
+   ============================================ */
+
+.button-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.mybtn {
+    padding: 10px 20px;
+    border: 2px solid var(--oxford-blue);
+    background-color: var(--alice-blue);
+    color: var(--oxford-blue-3);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.mybtn:hover,
+.mybtn.activebtn {
+    background-color: var(--yale-blue);
+    color: var(--alice-blue);
+    border-color: var(--yale-blue);
+}
+
+.mybtn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ============================================
+   Directory Page - Member Cards
+   ============================================ */
+
+#directory-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.member-card {
+    background-color: white;
+    border: 1px solid var(--cool-gray);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.member-card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.member-card h3 {
+    color: var(--oxford-blue-3);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.membership-level {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Gold membership */
+.member-card:nth-child(3n+1) .membership-level,
+.member-card:has(.website-link[href*="accratechsolutions"]) .membership-level,
+.member-card:has(.website-link[href*="acrafinancial"]) .membership-level,
+.member-card:has(.website-link[href*="sunsethospitality"]) .membership-level {
+    background-color: #ffd700;
+    color: var(--oxford-blue-3);
+}
+
+/* Silver membership */
+.member-card:nth-child(3n+2) .membership-level,
+.member-card:has(.website-link[href*="goldencoastlogistics"]) .membership-level,
+.member-card:has(.website-link[href*="coastalconstruction"]) .membership-level {
+    background-color: #c0c0c0;
+    color: var(--oxford-blue-3);
+}
+
+/* Member (Bronze) membership */
+.member-card:nth-child(3n+3) .membership-level,
+.member-card:has(.website-link[href*="greenearthfarms"]) .membership-level,
+.member-card:has(.website-link[href*="heritageartsgh"]) .membership-level {
+    background-color: #cd7f32;
+    color: white;
+}
+
+.member-card .address,
+.member-card .phone {
+    font-size: 0.9rem;
+    color: var(--paynes-gray);
+    margin: 5px 0;
+}
+
+.member-card .website-link {
+    display: inline-block;
+    margin: 10px 0;
+    color: var(--true-blue);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--poppins);
+}
+
+.member-card .website-link:hover {
+    text-decoration: underline;
+    color: var(--sapphire);
+}
+
+.member-card .description {
+    font-size: 0.9rem;
+    color: var(--paynes-gray);
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+footer {
+    background-color: var(--oxford-blue);
+    color: var(--alice-blue);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-info p,
+.dev-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.social a {
+    color: var(--alice-blue);
+    transition: color 0.3s;
+}
+
+.social a:hover {
+    color: var(--true-blue);
+}
+
+.social svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+#currentyear,
+#lastModified {
+    font-weight: normal;
+}
+
+/* Active nav link - wayfinding */
+.nav-a.active {
+    background-color: var(--true-blue);
+    color: var(--alice-blue);
+    font-weight: bold;
+}

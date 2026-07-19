@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Accra Tech Solutions",
+        "address": "123 Independence Avenue, Accra",
+        "phone": "+233 30 123 4567",
+        "website": "https://accratechsolutions.com",
+        "image": "accratechsolutions.webp",
+        "membershipLevel": 3,
+        "description": "Leading technology and software development company in Ghana."
+    },
+    {
+        "name": "Golden Coast Logistics",
+        "address": "45 Harbor Road, Tema",
+        "phone": "+233 30 234 5678",
+        "website": "https://goldencoastlogistics.com",
+        "image": "goldencoastlogistics.webp",
+        "membershipLevel": 2,
+        "description": "Reliable shipping and logistics services across West Africa."
+    },
+    {
+        "name": "Green Earth Farms",
+        "address": "78 Agricultural Lane, Kumasi",
+        "phone": "+233 30 345 6789",
+        "website": "https://greenearthfarms.org",
+        "image": "greenearthfarms.webp",
+        "membershipLevel": 1,
+        "description": "Sustainable organic farming and agricultural consulting."
+    },
+    {
+        "name": "Accra Financial Group",
+        "address": "200 Liberation Road, Accra",
+        "phone": "+233 30 456 7890",
+        "website": "https://acrafinancial.com",
+        "image": "accrafinancial.webp",
+        "membershipLevel": 3,
+        "description": "Comprehensive banking, investment, and financial advisory services."
+    },
+    {
+        "name": "Coastal Construction Ltd",
+        "address": "56 Beach Drive, Cape Coast",
+        "phone": "+233 30 567 8901",
+        "website": "https://coastalconstruction.com",
+        "image": "coastalconstruction.webp",
+        "membershipLevel": 2,
+        "description": "Commercial and residential construction with modern engineering."
+    },
+    {
+        "name": "Heritage Arts & Crafts",
+        "address": "34 Cultural Center Road, Accra",
+        "phone": "+233 30 678 9012",
+        "website": "https://heritageartsgh.com",
+        "image": "heritagearts.webp",
+        "membershipLevel": 1,
+        "description": "Authentic Ghanaian art, crafts, and cultural merchandise."
+    },
+    {
+        "name": "Sunset Hospitality Group",
+        "address": "99 Ocean Boulevard, Accra",
+        "phone": "+233 30 789 0123",
+        "website": "https://sunsethospitality.com",
+        "image": "sunsethospitality.webp",
+        "membershipLevel": 3,
+        "description": "Premium hotels, restaurants, and event management services."
+    }
+]

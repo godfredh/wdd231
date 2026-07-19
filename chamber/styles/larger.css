@@ -1,0 +1,127 @@
+/* ============================================
+   WDD231 - Larger/Desktop Styles
+   Chamber of Commerce - Directory Page
+   ============================================ */
+
+@media (min-width: 1024px) {
+
+    /* ============================================
+       Navigation
+       ============================================ */
+    #menu {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+    }
+
+    nav ul li {
+        display: block;
+        flex: 1 1 auto;
+        max-width: 200px;
+        border-bottom: none;
+    }
+
+    nav a {
+        padding: 12px 24px;
+    }
+
+    /* ============================================
+       Header
+       ============================================ */
+    .box-logo-header {
+        justify-content: flex-start;
+        padding: 0 20px;
+    }
+
+    /* ============================================
+       Main Layout
+       ============================================ */
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* ============================================
+       Directory - Grid View
+       ============================================ */
+    #directory-box.grid-view {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+    }
+
+    /* ============================================
+       Directory - List View
+       ============================================ */
+    #directory-box.list-view {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #directory-box.list-view .member-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 25px;
+    }
+
+    #directory-box.list-view .member-card img {
+        width: 120px;
+        height: 90px;
+        object-fit: cover;
+        margin-bottom: 0;
+        border-radius: 4px;
+    }
+
+    #directory-box.list-view .member-card h3 {
+        margin: 0;
+        min-width: 200px;
+    }
+
+    #directory-box.list-view .member-card .membership-level {
+        margin: 0;
+        min-width: 80px;
+        text-align: center;
+    }
+
+    #directory-box.list-view .member-card .address,
+    #directory-box.list-view .member-card .phone {
+        margin: 0;
+        min-width: 200px;
+    }
+
+    #directory-box.list-view .member-card .website-link {
+        margin: 0;
+        min-width: 120px;
+    }
+
+    #directory-box.list-view .member-card .description {
+        display: none;
+    }
+
+    /* ============================================
+       Footer
+       ============================================ */
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-info,
+    .social,
+    .dev-info {
+        flex: 1 1 30%;
+        text-align: center;
+    }
+}
