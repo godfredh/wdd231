@@ -5,6 +5,36 @@
 
 @media (min-width: 1024px) {
 
+    @media (min-width: 800px) {
+        .join-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+    }
+
+    /* ============================================
+       Discover Page - Desktop Grid Layout
+       ============================================ */
+    main.discover {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 30px;
+        align-items: start;
+    }
+
+    /* Keep page title spanning across top */
+    main.discover .Main-title {
+        grid-column: 1 / -1;
+    }
+
+    /* Photo Gallery Layout for Larger Screens */
+    .local-photos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
     /* ============================================
        Navigation
        ============================================ */
@@ -123,5 +153,21 @@
     .dev-info {
         flex: 1 1 30%;
         text-align: center;
+    }
+
+    /* Desktop Layout for Join Page */
+    @media (min-width: 800px) {
+        .join-container {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            /* 60% Form, 40% Membership Cards */
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .submit-btn {
+            width: auto;
+            /* Normal width on desktop */
+        }
     }
 }

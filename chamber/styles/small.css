@@ -119,12 +119,14 @@ nav ul {
     background-color: var(--yale-blue);
 }
 
+/* Navigation default hidden state for mobile */
 nav ul li {
     display: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-nav ul.open li {
+/* Ensures menu opens properly across all pages */
+nav ul.open li,
+nav.open ul li {
     display: block;
 }
 
@@ -346,4 +348,292 @@ footer {
     background-color: var(--true-blue);
     color: var(--alice-blue);
     font-weight: bold;
+}
+
+/* ============================================
+   Discover Page Styles (Mobile / Base)
+   ============================================ */
+
+/* Main Discover Layout */
+main.discover {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sidebar Sections */
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-bar article {
+    background-color: white;
+    border: 1px solid var(--cool-gray);
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.side-bar article h3 {
+    color: var(--oxford-blue-3);
+    border-bottom: 2px solid var(--yale-blue);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.side-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-bar li {
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--cool-gray);
+    font-size: 0.95rem;
+}
+
+.side-bar li:last-child {
+    border-bottom: none;
+}
+
+/* Sidebar Calendar Table */
+#calendar {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+}
+
+#calendar caption {
+    font-family: var(--poppins);
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--oxford-blue-3);
+}
+
+#calendar th,
+#calendar td {
+    border: 1px solid var(--cool-gray);
+    text-align: center;
+    padding: 6px;
+    font-size: 0.85rem;
+}
+
+#calendar th {
+    background-color: var(--yale-blue);
+    color: var(--alice-blue);
+    font-family: var(--poppins);
+}
+
+#calendar td:hover {
+    background-color: var(--alice-blue);
+}
+
+
+
+/* Photo Gallery (Mobile: 1 Column Stack) */
+.local-photos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.local-photos figure {
+    margin: 0;
+    background-color: white;
+    border: 1px solid var(--cool-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.local-photos figure:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.local-photos img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.local-photos figcaption {
+    padding: 12px;
+    text-align: center;
+    font-family: var(--poppins);
+    font-weight: 700;
+    color: var(--oxford-blue-3);
+    background-color: white;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   JOIN PAGE & FORM STYLING
+   ============================================ */
+
+/* Main Container Layout */
+.join-main {
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Main-title {
+    text-align: center;
+    color: #002855;
+    margin-bottom: 2rem;
+    font-family: var(--poppins, sans-serif);
+}
+
+.join-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Form Container */
+.join-form {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.sub-title-form,
+.sub-title-member {
+    color: #002855;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    font-family: var(--poppins, sans-serif);
+}
+
+/* Stack labels and inputs cleanly */
+.form-label {
+    display: block;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+    color: #333333;
+    font-size: 0.95rem;
+}
+
+.form-label input,
+.form-label select,
+.form-label textarea {
+    display: block;
+    width: 100%;
+    margin-top: 0.4rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.form-label input:focus,
+.form-label select:focus,
+.form-label textarea:focus {
+    outline: none;
+    border-color: #002855;
+    box-shadow: 0 0 4px rgba(0, 40, 85, 0.3);
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    background-color: #002855;
+    color: #ffffff;
+    border: none;
+    padding: 0.85rem 1.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #001f42;
+}
+
+/* Membership Cards Styling */
+.membership-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 6px solid #002855;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h4 {
+    margin: 0 0 0.5rem 0;
+    color: #002855;
+    font-size: 1.1rem;
+}
+
+.card p {
+    margin: 0 0 1rem 0;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.modal-btn {
+    background-color: #e2e8f0;
+    color: #002855;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-btn:hover {
+    background-color: #002855;
+    color: #ffffff;
+}
+
+/* Dialog Modals Styling */
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #002855;
+}
+
+.close-modal {
+    margin-top: 1.5rem;
+    background-color: #002855;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    cursor: pointer;
 }

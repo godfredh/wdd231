@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <script src="scripts/main.js" defer></script>
+
     <link rel="icon" href="images/favicon-main-modified.ico" sizes="48x48" type="image/ico">
 </head>
 
@@ -50,9 +52,141 @@
         </nav>
     </header>
 
-    <main>
-        <h2 class="Main-title">Join the Chamber</h2>
-        <p>Content coming soon...</p>
+    <main class="join-main">
+        <h2 class="Main-title">Join the Accra Chamber of Commerce</h2>
+
+        <div class="join-container">
+            <!-- Application Form Section -->
+            <form method="get" action="thankyou.html" class="join-form">
+                <h3 class="sub-title-form">Membership Application</h3>
+
+                <label class="form-label">
+                    First Name
+                    <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required
+                        placeholder="First Name">
+                </label>
+
+                <label class="form-label">
+                    Last Name
+                    <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required
+                        placeholder="Last Name">
+                </label>
+
+                <label class="form-label">
+                    Organizational Title
+                    <input type="text" name="organizationTitle" title="Enter your organizational title"
+                        autocomplete="organization-title" pattern="[A-Za-z\s\-.,']{2,}" required
+                        placeholder="e.g. Manager, Director">
+                </label>
+
+                <label class="form-label">
+                    Email Address
+                    <input type="email" name="email" title="Enter your email address" autocomplete="email"
+                        placeholder="example@email.com" required>
+                </label>
+
+                <label class="form-label">
+                    Mobile Phone Number
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required
+                        placeholder="+233 123-456-7890">
+                </label>
+
+                <label class="form-label">
+                    Business / Organization Name
+                    <input type="text" name="organization" title="Enter your business or organization name"
+                        autocomplete="organization" required placeholder="Company Name">
+                </label>
+
+                <label class="form-label">
+                    Membership Level
+                    <select name="membershipLevel" required>
+                        <option value="" disabled selected>Select a membership level</option>
+                        <option value="NP">NP Membership (Non-Profit)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label class="form-label">
+                    Business / Organization Description
+                    <textarea name="organizationDescription" title="Describe your business or organization" rows="4"
+                        placeholder="Briefly describe your organization..."></textarea>
+                </label>
+
+                <!-- Hidden field populated automatically on form submit -->
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+
+                <button class="submit-btn" type="submit">Submit Application</button>
+            </form>
+
+            <!-- Membership Cards Section -->
+            <section class="membership-container">
+                <h3 class="sub-title-member">Membership Levels</h3>
+
+                <div class="card">
+                    <h4>NP Membership Level</h4>
+                    <p>Designed for non-profit organizations and educational institutions.</p>
+                    <button class="modal-btn" id="npButton">Learn More</button>
+                </div>
+
+                <div class="card">
+                    <h4>Bronze Membership Level</h4>
+                    <p>Ideal for small businesses and new startups looking to build contacts.</p>
+                    <button class="modal-btn" id="bronzeButton">Learn More</button>
+                </div>
+
+                <div class="card">
+                    <h4>Silver Membership Level</h4>
+                    <p>Great for established businesses needing expanded advertising & network options.</p>
+                    <button class="modal-btn" id="silverButton">Learn More</button>
+                </div>
+
+                <div class="card">
+                    <h4>Gold Membership Level</h4>
+                    <p>Premium benefits, priority placement, spotlight features, and event sponsorship opportunities.
+                    </p>
+                    <button class="modal-btn" id="goldButton">Learn More</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modals for Membership Cards -->
+        <dialog id="npModal">
+            <div class="modal-content">
+                <h3>Non-Profit Membership (NP)</h3>
+                <p>No membership fee. Access to community networking, listing in the business directory, and invitation
+                    to public chamber meetings.</p>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="bronzeModal">
+            <div class="modal-content">
+                <h3>Bronze Membership</h3>
+                <p>Includes basic business directory listing, access to networking events, and discounted rates for
+                    chamber workshops.</p>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="silverModal">
+            <div class="modal-content">
+                <h3>Silver Membership</h3>
+                <p>Includes enhanced directory listing, priority event registration, mid-level advertising options, and
+                    social media spotlight options.</p>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="goldModal">
+            <div class="modal-content">
+                <h3>Gold Membership</h3>
+                <p>Full suite of benefits, premier homepage spotlight feature, free entry to major chamber networking
+                    events, and logo placement on promotional materials.</p>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
     </main>
 
     <footer>
@@ -90,7 +224,16 @@
             <p id="lastModified"></p>
         </div>
     </footer>
-    <script src="scripts/main.js" defer></script>
+
+    <script>
+        // Set timestamp automatically when form is submitted
+        document.addEventListener("DOMContentLoaded", () => {
+            const timestampField = document.querySelector("#timestamp");
+            if (timestampField) {
+                timestampField.value = new Date().toISOString();
+            }
+        });
+    </script>
 </body>
 
 </html>
