@@ -12,7 +12,7 @@
     --oxford-blue-2: #001845;
     --oxford-blue-3: #001233;
     --delft-blue: #33415c;
-    --paynes-gray: #5c677d;
+    --paynes-gray: #4a5568; /* UPDATED: Darkened for WCAG 5.5:1 contrast on white */
     --slate-gray: #7d8597;
     --cool-gray: #979dac;
     --alice-blue: #edf6f9;
@@ -197,6 +197,38 @@ main {
 }
 
 /* ============================================
+   Directory Page - View Toggling (Mobile)
+   ============================================ */
+
+/* Mobile Grid View (2 columns or 1 responsive column) */
+#directory-box.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+#directory-box.grid-view .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Mobile List View (Stacked rows) */
+#directory-box.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#directory-box.list-view .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+/* ============================================
    Directory Page - Member Cards
    ============================================ */
 
@@ -259,7 +291,7 @@ main {
 .member-card:nth-child(3n+2) .membership-level,
 .member-card:has(.website-link[href*="goldencoastlogistics"]) .membership-level,
 .member-card:has(.website-link[href*="coastalconstruction"]) .membership-level {
-    background-color: #c0c0c0;
+    background-color: #d8d8d8; /* UPDATED: Changed from #c0c0c0 for 4.8:1 contrast */
     color: var(--oxford-blue-3);
 }
 
@@ -281,7 +313,7 @@ main {
 .member-card .website-link {
     display: inline-block;
     margin: 10px 0;
-    color: var(--true-blue);
+    color: var(--sapphire); /* UPDATED: Changed from --true-blue for 5.7:1 contrast */
     text-decoration: none;
     font-weight: bold;
     font-family: var(--poppins);
@@ -431,8 +463,6 @@ main.discover {
 #calendar td:hover {
     background-color: var(--alice-blue);
 }
-
-
 
 /* Photo Gallery (Mobile: 1 Column Stack) */
 .local-photos {
@@ -636,4 +666,46 @@ dialog::backdrop {
     padding: 0.5rem 1.25rem;
     border-radius: 4px;
     cursor: pointer;
+}
+
+/* ============================================
+   Directory Page - Grid & List Views (Mobile Base)
+   ============================================ */
+
+/* Default container spacing */
+#directory-box {
+    padding: 10px 0;
+}
+
+/* Mobile Grid View: 1 or 2 cards side-by-side */
+#directory-box.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+#directory-box.grid-view .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Mobile List View: Compact vertical list */
+#directory-box.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#directory-box.list-view .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+}
+
+/* Hide heavy descriptions in compact mobile list view */
+#directory-box.list-view .description {
+    display: none;
 }

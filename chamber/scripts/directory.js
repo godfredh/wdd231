@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const listViewBtn = document.getElementById("list-view-btn");
     const gridViewBtn = document.getElementById("grid-view-btn");
 
+    // Set default initial state (Grid view by default)
+    directoryBox.classList.add("grid-view");
+    gridViewBtn.classList.add("activebtn");
+    listViewBtn.classList.remove("activebtn");
+
     // Fetch members data
     async function getMembers() {
         try {
