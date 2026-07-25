@@ -1,47 +1,30 @@
 /* ============================================
-   WDD231 - Larger/Desktop Styles
-   Chamber of Commerce - Directory Page
-   ============================================ */
+   WDD231 - Larger/Desktop Styles
+   Chamber of Commerce - Multi-Page
+   ============================================ */
 
 @media (min-width: 1024px) {
 
     /* ============================================
-       Discover Page - Desktop Grid Layout
-       ============================================ */
-    main.discover {
-        display: grid;
-        grid-template-columns: 320px 1fr;
-        gap: 30px;
-        align-items: start;
+       Header & Navigation
+       ============================================ */
+    .box-logo-header {
+        justify-content: flex-start;
+        padding: 0 20px;
     }
 
-    /* Keep page title spanning across top */
-    main.discover .Main-title {
-        grid-column: 1 / -1;
-    }
-
-    /* Photo Gallery Layout for Larger Screens */
-    .local-photos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    /* ============================================
-       Navigation
-       ============================================ */
     #menu {
-        display: none;
+        display: none !important;
     }
 
     nav ul {
-        display: flex;
+        display: flex !important;
         justify-content: center;
         gap: 0;
     }
 
     nav ul li {
-        display: block;
+        display: block !important;
         flex: 1 1 auto;
         max-width: 200px;
         border-bottom: none;
@@ -52,16 +35,8 @@
     }
 
     /* ============================================
-       Header
-       ============================================ */
-    .box-logo-header {
-        justify-content: flex-start;
-        padding: 0 20px;
-    }
-
-    /* ============================================
-       Main Layout
-       ============================================ */
+       Main Base Layout
+       ============================================ */
     main {
         max-width: 1200px;
         margin: 0 auto;
@@ -69,89 +44,114 @@
     }
 
     /* ============================================
-       Directory - Grid View
-       ============================================ */
-    #directory-box.grid-view {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 25px;
+       Home Page Layout
+       ============================================ */
+    .hero-main-box {
+        position: relative;
+        margin-bottom: 30px;
     }
 
-    /* ============================================
-       Directory - List View
-       ============================================ */
-    #directory-box.list-view {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    #directory-box.list-view .member-card {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
-        padding: 15px 25px;
-    }
-
-    #directory-box.list-view .member-card img {
-        width: 120px;
-        height: 90px;
+    .hero-box-img img.hero-home-img {
+        width: 100%;
+        height: 400px;
         object-fit: cover;
-        margin-bottom: 0;
-        border-radius: 4px;
+        border-radius: 8px;
+        display: block;
     }
 
-    #directory-box.list-view .member-card h3 {
-        margin: 0;
-        min-width: 200px;
+    .call-to-action {
+        position: absolute;
+        top: 50%;
+        left: 40px;
+        right: auto;
+        bottom: auto;
+        transform: translateY(-50%);
+        background-color: rgba(31, 46, 59, 0.85);
+        color: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        max-width: 420px;
+        text-align: left;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    #directory-box.list-view .member-card .membership-level {
-        margin: 0;
-        min-width: 80px;
-        text-align: center;
+    .call-to-action h3 {
+        margin-top: 0;
+        color: #ffffff;
+        font-size: 1.3rem;
     }
 
-    #directory-box.list-view .member-card .address,
-    #directory-box.list-view .member-card .phone {
-        margin: 0;
-        min-width: 200px;
+    .call-to-action p {
+        font-size: 0.95rem;
+        line-height: 1.4;
     }
 
-    #directory-box.list-view .member-card .website-link {
-        margin: 0;
-        min-width: 120px;
+    .call-to-action button.join-us {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: #ffcc00;
+        color: #000;
     }
 
-    #directory-box.list-view .member-card .description {
-        display: none;
+    /* Events & Weather Grid */
+    .event-main-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .event-main,
+    .weather-main,
+    .weather-forecast {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-top: 4px solid #0d3b66;
+    }
+
+    .event-main h2,
+    .weather-main h2,
+    .weather-forecast h2 {
+        margin-top: 0;
+        font-size: 1.2rem;
+        color: #0d3b66;
+        border-bottom: 2px solid #f4d35e;
+        padding-bottom: 6px;
+    }
+
+    /* Spotlights Grid */
+    .spotlights-main-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-bottom: 40px;
     }
 
     /* ============================================
-       Desktop Layout for Join Page
-       ============================================ */
+       Join Page Desktop Layout
+       ============================================ */
     .join-container {
         display: grid;
-        grid-template-columns: 3fr 2fr;
-        /* 60% Form, 40% Membership Cards */
-        gap: 2.5rem;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 35px;
         align-items: start;
     }
 
-    .submit-btn {
-        width: auto;
-        /* Normal width on desktop */
-    }
-
     /* ============================================
-       Footer
-       ============================================ */
+       Footer Layout
+       ============================================ */
     footer {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 20px;
+        padding: 30px 20px;
         flex-wrap: wrap;
         gap: 20px;
     }
@@ -161,5 +161,57 @@
     .dev-info {
         flex: 1 1 30%;
         text-align: center;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Discover Page Desktop Layout */
+    .discover {
+        display: grid !important;
+        grid-template-columns: 320px 1fr !important;
+        grid-template-auto-rows: auto !important;
+        gap: 30px !important;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .discover .Main-title {
+        grid-column: 1 / -1;
+    }
+
+    .discover .side-bar {
+        grid-column: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .discover .local-photos {
+        grid-column: 2 / 3;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+        align-content: start;
+    }
+}
+
+@media (min-width: 1024px) {
+    #menu {
+        display: none !important;
+        /* Hides the hamburger on desktop */
+    }
+
+    nav ul {
+        display: flex !important;
+        /* Forces nav links to show horizontally on desktop */
+        flex-direction: row;
     }
 }
