@@ -61,30 +61,26 @@ async function getWeather() {
 }
 
 function displayCurrentWeather(data) {
-    const temp = Math.round(data.main.temp);
-    const desc = data.weather[0].description;
-    const icon = data.weather[0].icon;
-    const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    // 1. Define the iconUrl using the data returned from the API
+    const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    const description = data.weather[0].description;
 
+    // 2. Build your weather HTML, adding explicit width and height to prevent layout shifts
     weatherMainContainer.innerHTML = `
-        <h2>Current Weather</h2>
-        <div class="weather-content" style="display: flex; align-items: center; gap: 15px;">
-            <img src="${iconUrl}" alt="${desc}" style="width: 50px; height: 50px;">
-            <div>
-                <p style="font-size: 1.2rem; font-weight: bold; margin: 0;">${temp}&deg;C</p>
-                <p style="text-transform: capitalize; margin: 0;">${desc}</p>
-            </div>
+        <h3>Current Weather</h3>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="${iconUrl}" alt="${description}" width="50" height="50">
+            <p style="font-size: 1.2rem; font-weight: bold; margin: 0;">${Math.round(data.main.temp)}&deg;C</p>
         </div>
-        <p style="margin-top: 10px; font-size: 0.9rem;">Humidity: ${data.main.humidity}%</p>
+        <p style="text-transform: capitalize; margin-top: 5px;">${description}</p>
     `;
 }
-
 function displayForecast(data) {
     // Filter forecast to get midday readings (approx. every 24 hours)
     const dailyForecasts = data.list.filter(item => item.dt_txt.includes('12:00:00')).slice(0, 3);
 
     let html = '<h2>3-Day Forecast</h2><ul style="list-style: none; padding: 0; margin: 0;">';
-    
+
     dailyForecasts.forEach(day => {
         const date = new Date(day.dt * 1000).toLocaleDateString('en-US', { weekday: 'short' });
         const temp = Math.round(day.main.temp);
@@ -111,8 +107,8 @@ async function getSpotlights() {
         const members = await response.json();
 
         // Filter for Gold (Level 3) or Silver (Level 2) members if applicable
-        const qualifiedMembers = members.filter(member => 
-            member.membershipLevel === 2 || member.membershipLevel === 3 || 
+        const qualifiedMembers = members.filter(member =>
+            member.membershipLevel === 2 || member.membershipLevel === 3 ||
             member.membershipLevel === 'Silver' || member.membershipLevel === 'Gold'
         );
 
@@ -135,18 +131,36 @@ function displaySpotlights(companies) {
 
     companies.forEach(company => {
         const card = document.createElement('div');
+        // Add class to match your site's card design
         card.classList.add('spotlight-card');
-        
-        // FIXED: Checks common image property names from members.json
-        const companyImage = company.image || company.logo || company.icon || '';
+
+        // Inline styling for professional card layout matching the weather/events section
+        card.style.cssText = `
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        `;
+
+        const imageName = company.image || company.logo || company.icon || '';
+        const companyImage = imageName ? `images/${imageName}` : 'images/default-logo.png';
 
         card.innerHTML = `
-            <img src="${companyImage}" alt="${company.name} Logo" style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 10px;">
-            <h3>${company.name}</h3>
-            <p style="font-size: 0.85rem; color: var(--yale-blue); font-weight: bold;">Level ${company.membershipLevel} Member</p>
-            <p style="font-size: 0.9rem;">${company.address}</p>
-            <p style="font-size: 0.9rem;">${company.phone}</p>
-            <a href="${company.website}" target="_blank" class="website-link">Website</a>
+            <div style="height: 70px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+                <img src="${companyImage}" alt="${company.name} Logo" width="140" height="60" style="max-height: 60px; max-width: 140px; object-fit: contain;">
+            </div>
+            <h3 style="font-size: 1.1rem; margin: 5px 0; color: var(--yale-blue, #1e3a8a);">${company.name}</h3>
+            <p style="font-size: 0.85rem; color: #2563eb; font-weight: bold; margin: 4px 0;">Level ${company.membershipLevel} Member</p>
+            <hr style="width: 100%; border: none; border-top: 1px solid #edf2f7; margin: 8px 0;">
+            <p style="font-size: 0.85rem; color: #4a5568; margin: 3px 0;">${company.address}</p>
+            <p style="font-size: 0.85rem; color: #4a5568; margin: 3px 0;">${company.phone}</p>
+            <a href="${company.website}" target="_blank" class="website-link" style="margin-top: 10px; display: inline-block; font-size: 0.9rem; font-weight: 600; text-decoration: none; color: #2563eb;">Website &rarr;</a>
         `;
         spotlightsContainer.appendChild(card);
     });

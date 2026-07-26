@@ -8,7 +8,7 @@
     <meta property="og:title" content="Home | Accra Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image"
-        content="https://godfredh.github.io/wdd231/chamber/images/logo-chamber-modified-small.jpg">
+        content="https://godfredh.github.io/wdd231/chamber/images/logo-chamber-modified-small.webp">
     <meta property="og:url" content="https://godfredh.github.io/wdd231/chamber/index.html">
     <meta property="og:description" content="Accra Chamber of Commerce - Promoting local business growth">
 
@@ -26,8 +26,14 @@
             href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap">
     </noscript>
 
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
+    <!-- Optimized Non-Blocking CSS Loads -->
+    <link rel="stylesheet" href="styles/normalize.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/small.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+    </noscript>
+
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 1024px)">
 
     <script src="scripts/main.js" defer></script>
@@ -40,7 +46,7 @@
     <header>
         <nav>
             <div class="box-logo-header">
-                <img class="logo-chamber" src="images/logo-chamber-modified-small.jpg" alt="Logo Chamber Accra"
+                <img class="logo-chamber" src="images/logo-chamber-modified-small.webp" alt="Logo Chamber Accra"
                     width="60" height="60">
                 <h1 class="nameHeader">Accra<br>Chamber of Commerce</h1>
                 <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
@@ -57,10 +63,10 @@
     <main>
         <section class="hero-main-box">
             <picture class="hero-box-img">
-                <source media="(max-width: 600px)" srcset="images/hero-chamber-410.png">
-                <source media="(max-width: 800px)" srcset="images/hero-chamber-600.png">
-                <source media="(max-width: 1200px)" srcset="images/hero-chamber-800.png">
-                <source media="(min-width: 1201px)" srcset="images/hero-chamber-1200.png">
+                <source media="(max-width: 600px)" srcset="images/hero-chamber-410.webp">
+                <source media="(max-width: 800px)" srcset="images/hero-chamber-600.webp">
+                <source media="(max-width: 1200px)" srcset="images/hero-chamber-800.webp">
+                <source media="(min-width: 1201px)" srcset="images/hero-chamber-1200.webp">
                 <img class="hero-home-img" src="images/hero-chamber-410.png" alt="Accra skyline view" width="410"
                     height="230" fetchpriority="high">
             </picture>
