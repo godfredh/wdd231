@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Application Submitted | Accra Chamber of Commerce</title>
+    <meta name="description" content="Thank you for joining the Accra Chamber of Commerce">
+    <meta name="author" content="Mensah Godfred">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 1024px)">
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+
+    <link rel="icon" href="images/favicon-main-modified.ico" sizes="48x48" type="image/ico">
+</head>
+
+<body id="thankyou-page">
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/logo-chamber-modified-small.webp" alt="Logo Chamber Accra">
+                <h1 class="nameHeader">Accra<br>Chamber of Commerce</h1>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="discover.html">Discover</a></li>
+                <li><a class="nav-a" href="directory.html">Directory</a></li>
+                <li><a class="nav-a" href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thankyou-main">
+        <section class="thankyou-card">
+            <h2>Application Received Successfully!</h2>
+            <p>Thank you for submitting your application to the Accra Chamber of Commerce. Below is a summary of the information you provided:</p>
+
+            <div id="results" class="results-container">
+                <!-- JavaScript will dynamically populate the submitted values here -->
+            </div>
+
+            <div class="return-action">
+                <a href="index.html" class="home-btn">Return to Home Page</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Accra Chamber of Commerce</strong></p>
+            <p>123 Independence Avenue</p>
+            <p>Accra, Ghana</p>
+            <p>info@accrachamber.org</p>
+            <p>+233 30 123 4567</p>
+        </div>
+        <div class="dev-info">
+            <p>WDD 231 Class Project</p>
+            <p>Mensah Godfred</p>
+            <p>&copy;<span id="currentyear"></span> Accra Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
