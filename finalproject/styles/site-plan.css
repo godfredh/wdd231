@@ -1,0 +1,208 @@
+/* Google Fonts import for AFANOVA: Poppins (Headings) & Open Sans (Body) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap');
+
+:root {
+    /* AFANOVA Color Palette Variables */
+    --primary-color: #0A192F;
+    /* Deep Tech Blue */
+    --secondary-color: #8892B0;
+    /* Slate Gray */
+    --accent1-color: #64FFDA;
+    /* Electric Cyan */
+    --accent2-color: #ffffff;
+    /* White */
+
+    /* Typography Variables */
+    --heading-font: "Poppins", sans-serif;
+    --paragraph-font: "Open Sans", sans-serif;
+
+    /* Theme color mapping */
+    --headline-color-on-white: #0A192F;
+    --headline-color-on-color: #ffffff;
+    --paragraph-color-on-white: #334155;
+    --paragraph-color-on-color: #ffffff;
+    --paragraph-background-color: #0A192F;
+    --nav-link-color: #ffffff;
+    --nav-background-color: #0A192F;
+    --nav-hover-link-color: #64FFDA;
+    --nav-hover-background-color: #112240;
+}
+
+
+/* Layout & Base Styles */
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3em 2em;
+    font-size: 18px;
+    text-align: center;
+    font-family: var(--paragraph-font);
+    background-color: #f8fafc;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+}
+
+h2 {
+    text-align: center;
+}
+
+hr {
+    height: 3px;
+    margin: 35px 0;
+    background: var(--accent1-color);
+    border: none;
+}
+
+header {
+    padding: 1.5em;
+    text-align: center;
+    color: var(--headline-color-on-color);
+    background-color: var(--paragraph-background-color);
+    border-radius: 8px 8px 0 0;
+}
+
+header>h1,
+header>h2 {
+    color: var(--headline-color-on-color);
+}
+
+p {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color-on-white);
+    padding: 1em;
+    line-height: 1.6;
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.colors th {
+    background-color: #999;
+    color: white;
+    padding: 6px;
+}
+
+.colors td {
+    width: 25%;
+    height: 3em;
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+}
+
+.accent2 {
+    background-color: var(--accent2-color);
+}
+
+p.colored {
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    padding: 1em;
+    min-width: 120px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:link,
+nav a:visited {
+    color: var(--nav-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+.sitemap {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: 3em 1.5em 1.5em 3em;
+    grid-template-areas: ". . home home . ."
+        ". . . top . ."
+        ". left left right right ."
+        "page2 page2 . . page3 page3";
+}
+
+.sitemap>div {
+    text-align: center;
+}
+
+.sm-home {
+    grid-area: home;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.sm-page2 {
+    grid-area: page2;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.sm-page3 {
+    grid-area: page3;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.top {
+    grid-area: top;
+    border-left: 1px solid;
+}
+
+.left {
+    grid-area: left;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.right {
+    grid-area: right;
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
