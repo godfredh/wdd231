@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 1024px)">
 
     <link rel="icon" href="images/favicon-main-modified.ico" sizes="48x48" type="image/x-icon">
-    <!-- Added defer to prevent render-blocking -->
     <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous" defer></script>
 </head>
 
@@ -39,7 +38,7 @@
     <header>
         <nav>
             <div class="box-logo-header">
-                <!-- Added intrinsic width and height -->
+                <!-- Explicit width and height fix the Unsized Image CLS error -->
                 <img class="logo-chamber" src="images/logo-chamber-modified-small.webp" alt="Logo Chamber Accra"
                     width="75" height="75">
                 <h1 class="nameHeader">Accra<br>Chamber of Commerce</h1>
@@ -71,8 +70,9 @@
                 </ul>
             </article>
 
-            <article id="article-02" class="article-02">
-                <!-- Dynamically populated content -->
+            <!-- Pre-rendered article box prevents content reflow layout shifts -->
+            <article id="visitor-message" class="article-02">
+                <p>Welcome! Loading visitor info...</p>
             </article>
 
             <article class="article-03">
@@ -94,38 +94,8 @@
             </article>
         </section>
 
-        <section class="local-photos">
-            <!-- Added width, height, and loading attributes to avoid layout shifts -->
-            <figure>
-                <img data-src="images/ghana-image-01.webp" src="images/ghana-image-01.webp"
-                    alt="Beautiful sunset over the beach" class="lazy-image" loading="lazy" width="600" height="400">
-                <figcaption>Beautiful beach</figcaption>
-            </figure>
-            <figure>
-                <img data-src="images/ghana-image-02.webp" src="images/ghana-image-02.webp" alt="Historic town square"
-                    class="lazy-image" loading="lazy" width="600" height="400">
-                <figcaption>Historic Site in Ghana</figcaption>
-            </figure>
-            <figure>
-                <img data-src="images/ghana-image-03.webp" src="images/ghana-image-03.webp" alt="Lush rainforest"
-                    class="lazy-image" loading="lazy" width="600" height="400">
-                <figcaption>Lush rainforest</figcaption>
-            </figure>
-            <figure>
-                <img data-src="images/ghana-image-04.webp" src="images/ghana-image-04.webp" alt="Mountain landscape"
-                    class="lazy-image" loading="lazy" width="600" height="400">
-                <figcaption>Mountain landscape</figcaption>
-            </figure>
-            <figure>
-                <img data-src="images/ghana-image-05.webp" src="images/ghana-image-05.webp" alt="Colonial architecture"
-                    class="lazy-image" loading="lazy" width="600" height="400">
-                <figcaption>Colonial architecture</figcaption>
-            </figure>
-            <figure>
-                <img data-src="images/ghana-image-06.webp" src="images/ghana-image-06.webp" alt="Vibrant city skyline"
-                    class="lazy-image" loading="lazy" width="600" height="400">
-                <figcaption>Vibrant city skyline</figcaption>
-            </figure>
+        <section class="local-photos" id="card-container">
+            <!-- JavaScript will inject cards here -->
         </section>
     </main>
 
@@ -138,7 +108,6 @@
             <p>+233 30 123 4567</p>
         </div>
         <div class="social">
-            <!-- Added rel="noopener noreferrer" for security on external links -->
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path
@@ -167,6 +136,7 @@
     </footer>
 
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/discover.js" type="module" defer></script>
 </body>
 
 </html>

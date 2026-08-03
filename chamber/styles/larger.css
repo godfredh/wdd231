@@ -1,13 +1,13 @@
 /* ============================================
-   WDD231 - Larger/Desktop Styles
-   Chamber of Commerce - Multi-Page
-   ============================================ */
+   WDD231 - Larger/Desktop Styles
+   Chamber of Commerce - Multi-Page
+   ============================================ */
 
 @media (min-width: 1024px) {
 
     /* ============================================
-       Header & Navigation
-       ============================================ */
+       Header & Navigation
+       ============================================ */
     .box-logo-header {
         justify-content: flex-start;
         padding: 0 20px;
@@ -20,6 +20,7 @@
     nav ul {
         display: flex !important;
         justify-content: center;
+        flex-direction: row;
         gap: 0;
     }
 
@@ -35,8 +36,8 @@
     }
 
     /* ============================================
-       Main Base Layout
-       ============================================ */
+       Main Base Layout
+       ============================================ */
     main {
         max-width: 1200px;
         margin: 0 auto;
@@ -44,8 +45,8 @@
     }
 
     /* ============================================
-       Home Page Layout
-       ============================================ */
+       Home Page Layout (Hero, Events, Spotlights)
+       ============================================ */
     .hero-main-box {
         position: relative;
         margin-bottom: 30px;
@@ -98,7 +99,6 @@
         color: #000;
     }
 
-    /* Events & Weather Grid */
     .event-main-box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -126,7 +126,6 @@
         padding-bottom: 6px;
     }
 
-    /* Spotlights Grid */
     .spotlights-main-box {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -135,8 +134,8 @@
     }
 
     /* ============================================
-       Join Page Desktop Layout
-       ============================================ */
+       Join Page Desktop Layout
+       ============================================ */
     .join-container {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
@@ -145,8 +144,45 @@
     }
 
     /* ============================================
-       Footer Layout
-       ============================================ */
+       Discover Page Desktop Layout (Named Grid Areas)
+       ============================================ */
+    #discover-page .discover {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-areas:
+            "title title"
+            "sidebar cards";
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #discover-page .Main-title {
+        grid-area: title;
+    }
+
+    #discover-page .side-bar {
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #calendar {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    #card-container {
+        grid-area: cards;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* ============================================
+       Footer Layout
+       ============================================ */
     footer {
         display: flex;
         justify-content: space-around;
@@ -170,48 +206,33 @@
     }
 }
 
-@media (min-width: 1024px) {
-
-    /* Discover Page Desktop Layout */
-    .discover {
-        display: grid !important;
-        grid-template-columns: 320px 1fr !important;
-        grid-template-auto-rows: auto !important;
-        gap: 30px !important;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    .discover .Main-title {
-        grid-column: 1 / -1;
-    }
-
-    .discover .side-bar {
-        grid-column: 1 / 2;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .discover .local-photos {
-        grid-column: 2 / 3;
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 20px !important;
-        align-content: start;
+/* ============================================
+   Tablet View (Medium Screens: min-width: 768px)
+   ============================================ */
+@media screen and (min-width: 768px) {
+    #discover-page .discover {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title title"
+            "sidebar cards";
+        gap: 1.5rem;
     }
 }
 
-@media (min-width: 1024px) {
-    #menu {
-        display: none !important;
-        /* Hides the hamburger on desktop */
+/* ============================================
+   Image Hover Effect (Medium & Large Screens Only)
+   ============================================ */
+@media screen and (min-width: 641px) {
+
+    .local-photos img,
+    .discover-card img {
+        transition: transform 0.3s ease, filter 0.3s ease;
     }
 
-    nav ul {
-        display: flex !important;
-        /* Forces nav links to show horizontally on desktop */
-        flex-direction: row;
+    .local-photos img:hover,
+    .discover-card img:hover {
+        transform: scale(1.03);
+        filter: brightness(1.05);
     }
 }
