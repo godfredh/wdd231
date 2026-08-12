@@ -1,0 +1,97 @@
+/* Desktop Styles matching Wireframe Layout */
+@media (min-width: 1024px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #menu {
+        display: none; /* Hide hamburger on desktop */
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        gap: 2rem;
+        margin-top: 0;
+    }
+
+    /* Hero Section Side-by-Side */
+    .hero-main-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        text-align: left;
+        padding: 3rem;
+    }
+
+    .hero-box-img {
+        margin-top: 0;
+    }
+
+    /* Section 1: Core Offerings 2-Column Grid */
+    .offerings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Section 2: Horizontal Form */
+    .home-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr auto;
+        gap: 1rem;
+        align-items: flex-end;
+    }
+
+    .submit-btn {
+        height: 48px;
+    }
+
+    /* Section 3: Community & Impact 3-Column Grid */
+    .impact-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 2rem 4rem;
+    }
+
+    .social {
+        margin-top: 0;
+    }
+}
+
+/* Courses Page Desktop Layout Adjustments */
+@media (min-width: 1024px) {
+    .courses-main {
+        padding: 3rem 2rem;
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .course-controls {
+        gap: 1.5rem;
+    }
+}
+
+/* Gallery Page Desktop Layout Adjustments */
+@media (min-width: 1024px) {
+    .gallery-main {
+        padding: 3rem 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}

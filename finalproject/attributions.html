@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Social Sharing Optimization (Open Graph) -->
-    <meta property="og:title" content="Courses & Programs | AFANOVA STEM and Robotics">
+    <meta property="og:title" content="Resource Attributions | AFANOVA STEM and Robotics">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://godfredh.github.io/wdd231/finalproject/images/afanova-logo.png">
-    <meta property="og:url" content="https://godfredh.github.io/wdd231/finalproject/courses.html">
-    <meta property="og:description" content="Explore practical coding bootcamps, robotics training, and hardware engineering courses at AFANOVA.">
+    <meta property="og:url" content="https://godfredh.github.io/wdd231/finalproject/attributions.html">
+    <meta property="og:description" content="Attributions for icons, fonts, and images used across the AFANOVA website.">
 
-    <title>Courses & Programs | AFANOVA STEM and Robotics</title>
-    <meta name="description" content="Browse AFANOVA's dynamic catalog of hands-on STEM, microcontroller, and software programming courses for youth.">
+    <title>Resource Attributions | AFANOVA STEM and Robotics</title>
+    <meta name="description" content="Attributions for third-party resources, icons, fonts, and imagery used in the AFANOVA project.">
     <meta name="author" content="Mensah Godfred">
 
     <!-- Google Fonts -->
@@ -44,7 +44,7 @@
             </div>
             <ul class="nav-list">
                 <li><a class="nav-a" href="index.html">Home</a></li>
-                <li><a class="nav-a active" href="courses.html">Courses</a></li>
+                <li><a class="nav-a" href="courses.html">Courses</a></li>
                 <li><a class="nav-a" href="gallery.html">Gallery</a></li>
                 <li><a class="nav-a" href="site-plan.html">Site Plan</a></li>
             </ul>
@@ -52,42 +52,34 @@
     </header>
 
     <!-- Main Content Area -->
-    <main class="courses-main">
-        <h2 class="Main-title">STEM & Robotics Course Catalog</h2>
-        <p class="courses-intro">Discover our hands-on technical tracks and modules designed for young innovators. Filter by category or search below.</p>
+    <main class="attributions-main" style="padding: 2.5rem 1rem; max-width: 900px; margin: 0 auto;">
+        <h2 class="Main-title" style="margin-bottom: 1rem;">Resource Attributions</h2>
+        <p style="color: var(--secondary-color); margin-bottom: 2rem;">We gratefully acknowledge the following creators and open-source platforms for providing the tools and media used in building the AFANOVA website.</p>
 
-        <!-- Filtering / Search Controls -->
-        <div class="course-controls">
-            <button class="filter-btn active" data-filter="all">All Courses</button>
-            <button class="filter-btn" data-filter="coding">Coding & Software</button>
-            <button class="filter-btn" data-filter="hardware">Hardware & Robotics</button>
-        </div>
-
-        <!-- Dynamic Catalog Grid (Will be populated via JavaScript fetch from local JSON) -->
-        <section id="courses-container" class="courses-grid">
-            <!-- JavaScript will inject cards here -->
-        </section>
-
-        <!-- Modal Dialog for Detailed Information -->
-        <dialog id="course-modal" class="course-modal">
-            <div class="modal-content">
-                <h3 id="modal-title">Course Title</h3>
-                <p id="modal-description">Detailed course description goes here.</p>
-                <div class="modal-details">
-                    <p><strong>Duration:</strong> <span id="modal-duration"></span></p>
-                    <p><strong>Skill Level:</strong> <span id="modal-level"></span></p>
-                    <p><strong>Required Equipment:</strong> <span id="modal-hardware"></span></p>
-                    <p><strong>Tuition:</strong> <span id="modal-price"></span></p>
-                </div>
-                <button id="close-modal" class="close-modal-btn">Close</button>
+        <section style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="background: var(--white-color); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--secondary-color);">
+                <h3 style="margin-bottom: 0.5rem; color: var(--primary-color);">Typography</h3>
+                <p><strong>Google Fonts:</strong> Open Sans and Poppins typefaces used for all body text and headings.</p>
+                <p><a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color);">https://fonts.google.com/</a></p>
             </div>
-        </dialog>
+
+            <div style="background: var(--white-color); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--secondary-color);">
+                <h3 style="margin-bottom: 0.5rem; color: var(--primary-color);">Icons</h3>
+                <p><strong>FontAwesome:</strong> Social media and UI interaction icons.</p>
+                <p><a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color);">https://fontawesome.com/</a></p>
+            </div>
+
+            <div style="background: var(--white-color); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--secondary-color);">
+                <h3 style="margin-bottom: 0.5rem; color: var(--primary-color);">Imagery & Placeholders</h3>
+                <p><strong>Stock Photography:</strong> Images utilized in the gallery and banner sections are sourced under free-to-use commercial licenses or custom created for project demonstration purposes.</p>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer with Required Video Link and Attributions -->
+    <!-- Footer -->
     <footer>
         <div class="footer-info">
-            <p>AFANOVA &copy; 2026 - Mensah Godfred</p>
+            <p>AFANOVA &copy; <span id="current-year">2026</span> - Mensah Godfred</p>
             <p><a href="attributions.html" class="footer-link">Resource Attributions</a></p>
             <p><a href="YOUR_VIDEO_URL_HERE" target="_blank" rel="noopener noreferrer" class="footer-link">Project Video Demonstration</a></p>
         </div>
@@ -98,9 +90,8 @@
         </div>
     </footer>
 
-    <!-- Scripts (Using ES Module with Fetch / Try-Catch requirements) -->
+    <!-- Scripts -->
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/courses.js" type="module" defer></script>
 </body>
 
 </html>

@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "title": "Introduction to Scratch & Visual Logic",
+        "category": "coding",
+        "duration": "4 Weeks",
+        "level": "Beginner",
+        "price": "GH₵ 450",
+        "hardware": "Standard Laptop or Tablet",
+        "description": "Learn foundational programming logic using block-based interfaces to build interactive games and animations."
+    },
+    {
+        "id": 2,
+        "title": "Python Basics for Young Programmers",
+        "category": "coding",
+        "duration": "6 Weeks",
+        "level": "Beginner",
+        "price": "GH₵ 600",
+        "hardware": "Standard Laptop (Windows/Mac/Linux)",
+        "description": "Transition from block coding to text-based syntax by learning variables, loops, and conditional statements in Python."
+    },
+    {
+        "id": 3,
+        "title": "Web Development Fundamentals: HTML & CSS",
+        "category": "coding",
+        "duration": "6 Weeks",
+        "level": "Beginner",
+        "price": "GH₵ 600",
+        "hardware": "Standard Laptop with VS Code Installed",
+        "description": "Discover how websites are structured and styled by building responsive landing pages from scratch."
+    },
+    {
+        "id": 4,
+        "title": "JavaScript Logic & DOM Manipulation",
+        "category": "coding",
+        "duration": "8 Weeks",
+        "level": "Intermediate",
+        "price": "GH₵ 800",
+        "hardware": "Standard Laptop with Web Browser",
+        "description": "Add interactivity to websites by writing JavaScript functions, handling user events, and updating elements dynamically."
+    },
+    {
+        "id": 5,
+        "title": "Introduction to Arduino Microcontrollers",
+        "category": "hardware",
+        "duration": "6 Weeks",
+        "level": "Beginner",
+        "price": "GH₵ 750",
+        "hardware": "Laptop & Arduino Starter Kit",
+        "description": "Get hands-on with hardware by wiring circuits, blinking LEDs, and programming microcontrollers to read sensor data."
+    },
+    {
+        "id": 6,
+        "title": "Robotics Circuitry & Sensor Integration",
+        "category": "hardware",
+        "duration": "8 Weeks",
+        "level": "Intermediate",
+        "price": "GH₵ 950",
+        "hardware": "Laptop, Arduino Kit & Ultrasonic Sensors",
+        "description": "Combine ultrasonic sensors, motors, and motor drivers to build obstacle-avoiding autonomous mini-rovers."
+    },
+    {
+        "id": 7,
+        "title": "App Development with JavaScript & APIs",
+        "category": "coding",
+        "duration": "8 Weeks",
+        "level": "Advanced",
+        "price": "GH₵ 900",
+        "hardware": "Standard Laptop with Internet Access",
+        "description": "Fetch real-world data from external sources and parse JSON responses to create dynamic web utility apps."
+    },
+    {
+        "id": 8,
+        "title": "IoT Smart Home Automation Systems",
+        "category": "hardware",
+        "duration": "10 Weeks",
+        "level": "Advanced",
+        "price": "GH₵ 1,200",
+        "hardware": "Laptop & ESP32 Microcontroller Kit",
+        "description": "Build Wi-Fi enabled smart devices using ESP32 microcontrollers to control home appliances remotely."
+    },
+    {
+        "id": 9,
+        "title": "Mobile Game Design & Development",
+        "category": "coding",
+        "duration": "6 Weeks",
+        "level": "Intermediate",
+        "price": "GH₵ 700",
+        "hardware": "Laptop with Game Engine Software",
+        "description": "Design and code 2D arcade games optimized for touchscreens and mobile devices."
+    },
+    {
+        "id": 10,
+        "title": "3D CAD Modeling for Robotics Parts",
+        "category": "hardware",
+        "duration": "4 Weeks",
+        "level": "Beginner",
+        "price": "GH₵ 500",
+        "hardware": "Laptop with 3D Mouse / CAD Software",
+        "description": "Learn computer-aided design fundamentals to model custom chassis and brackets for 3D printing."
+    },
+    {
+        "id": 11,
+        "title": "Advanced C++ for Microcontrollers",
+        "category": "coding",
+        "duration": "8 Weeks",
+        "level": "Advanced",
+        "price": "GH₵ 950",
+        "hardware": "Standard Laptop with C++ IDE",
+        "description": "Master memory management and efficient coding practices using C++ for embedded hardware engineering."
+    },
+    {
+        "id": 12,
+        "title": "Line-Following & Maze-Solving Robots",
+        "category": "hardware",
+        "duration": "6 Weeks",
+        "level": "Intermediate",
+        "price": "GH₵ 850",
+        "hardware": "Laptop & Robotics Chassis Kit",
+        "description": "Program infrared reflectance arrays and PID control algorithms to build fast competition robots."
+    },
+    {
+        "id": 13,
+        "title": "Data Structures & Problem Solving",
+        "category": "coding",
+        "duration": "8 Weeks",
+        "level": "Intermediate",
+        "price": "GH₵ 800",
+        "hardware": "Standard Laptop",
+        "description": "Strengthen algorithmic thinking by implementing arrays, stacks, queues, and search algorithms."
+    },
+    {
+        "id": 14,
+        "title": "Solar Energy & Renewable Tech Circuits",
+        "category": "hardware",
+        "duration": "4 Weeks",
+        "level": "Beginner",
+        "price": "GH₵ 600",
+        "hardware": "Laptop & Renewable Energy Kit",
+        "description": "Explore green energy concepts by wiring miniature photovoltaic solar panels and battery storage units."
+    },
+    {
+        "id": 15,
+        "title": "Capstone Robotics Prototype Project",
+        "category": "hardware",
+        "duration": "10 Weeks",
+        "level": "Advanced",
+        "price": "GH₵ 1,500",
+        "hardware": "Full Toolset, Soldering Iron & Laptop",
+        "description": "Work in teams to design, solder, program, and showcase a fully functioning real-world robotics prototype."
+    }
+]
